@@ -1,0 +1,334 @@
+elna root: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            ab:ee:eb:d1:16:0a:d7:d2:50:fb:c0:1a:2c:92:55:3b
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: O = acme.elna.wire.link, CN = acme.elna.wire.link Root CA
+        Validity
+            Not Before: Oct  9 00:39:24 2023 GMT
+            Not After : Oct  6 00:39:24 2033 GMT
+        Subject: O = acme.elna.wire.link, CN = acme.elna.wire.link Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:f8:fc:b1:25:60:8f:30:82:7e:0c:03:f4:29:aa:
+                    9e:30:d6:bf:f1:a0:bc:f5:00:86:4b:76:70:a5:7d:
+                    55:dd:00:ac:7b:19:57:40:64:e1:13:49:86:72:cf:
+                    76:02:e0:c1:b4:89:c2:8b:19:83:36:77:e4:10:2b:
+                    17:78:df:b8:07
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:1
+            X509v3 Subject Key Identifier: 
+                96:D9:9B:E3:C1:AA:EA:53:EF:42:29:38:40:A8:1B:FC:BE:7E:E9:80
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:44:02:20:67:14:df:21:f2:5f:f8:80:92:94:65:76:92:0d:
+        88:a8:66:c8:77:84:df:02:35:be:6f:17:96:a4:54:22:7b:bd:
+        02:20:7b:c3:8d:a9:37:a7:8c:31:b6:0b:76:af:c6:3e:65:3e:
+        d6:9b:ed:c0:f2:81:7a:28:d3:f5:fe:12:20:22:19:1c
+
+============
+
+diya intermediate signed by elna: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            f4:5f:fc:fc:f1:c2:d6:ee:34:62:43:96:0c:d6:79:ea
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: O = acme.elna.wire.link, CN = acme.elna.wire.link Root CA
+        Validity
+            Not Before: Nov 14 21:19:10 2023 GMT
+            Not After : May 16 21:24:10 2024 GMT
+        Subject: CN = diya.wire.link E2EI Intermediate CA
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:b7:c9:3a:eb:02:c9:d0:1c:39:2f:44:0c:d8:ae:
+                    6a:6b:c3:18:9b:14:76:68:a7:8b:63:0d:cc:73:08:
+                    b8:ab:60:63:7f:79:46:17:57:1c:ad:73:3d:90:18:
+                    d5:34:0c:be:fd:97:d9:6e:6f:88:bd:a0:9b:34:7b:
+                    2d:04:f6:7d:c5
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Subject Key Identifier: 
+                FE:6B:42:56:A4:D6:5B:CA:DC:66:32:61:39:E7:84:E8:30:D0:BD:F3
+            X509v3 Authority Key Identifier: 
+                96:D9:9B:E3:C1:AA:EA:53:EF:42:29:38:40:A8:1B:FC:BE:7E:E9:80
+            X509v3 Name Constraints: critical
+                Permitted:
+                  DNS:acme.diya.wire.link
+                  URI:diya.wire.link
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:44:02:20:14:66:5c:31:0a:96:a4:f8:b9:db:9f:f5:ae:b1:
+        3b:78:ec:08:40:db:4e:5e:e7:0d:d2:7b:c0:5d:43:15:86:8f:
+        02:20:3a:eb:f8:c1:4e:63:9a:7f:07:7f:da:2b:e9:d7:c0:11:
+        c4:c8:24:b8:c9:d8:dd:40:a4:9f:09:c4:0e:7e:f5:d3
+
+============
+
+elna leaf signed by Let's Encrypt: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:6e:78:81:1b:39:72:01:cd:f3:cd:be:f1:e9:1a:b7:42:34
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, O = Let's Encrypt, CN = R3
+        Validity
+            Not Before: Oct  9 02:35:25 2023 GMT
+            Not After : Jan  7 02:35:24 2024 GMT
+        Subject: CN = idp.hogwash.work
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:be:77:31:ae:8d:51:d2:6b:b8:67:b0:78:da:35:
+                    70:a4:d0:b8:bc:8c:f2:24:b6:f7:2d:32:12:cd:43:
+                    31:9a:92:62:1e:27:fe:3a:f5:f2:0e:2c:81:96:d7:
+                    bb:0a:c8:58:e1:58:c8:86:cc:d5:3c:ac:02:69:c7:
+                    13:1f:87:9c:5e
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                09:C7:FD:18:56:80:C5:12:41:DA:F9:78:F1:4F:6F:3A:27:B2:D5:15
+            X509v3 Authority Key Identifier: 
+                14:2E:B3:17:B7:58:56:CB:AE:50:09:40:E6:1F:AF:9D:8B:14:C2:C6
+            Authority Information Access: 
+                OCSP - URI:http://r3.o.lencr.org
+                CA Issuers - URI:http://r3.i.lencr.org/
+            X509v3 Subject Alternative Name: 
+                DNS:idp.hogwash.work
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 3B:53:77:75:3E:2D:B9:80:4E:8B:30:5B:06:FE:40:3B:
+                                67:D8:4F:C3:F4:C7:BD:00:0D:2D:72:6F:E1:FA:D4:17
+                    Timestamp : Oct  9 03:35:25.069 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:44:02:20:36:1A:23:E6:0C:51:D0:48:24:08:34:91:
+                                12:AB:63:46:AA:9C:BB:FA:CB:71:01:FC:CD:3B:3C:C4:
+                                25:7D:64:D5:02:20:39:6C:0F:4F:2D:F8:01:FB:18:A7:
+                                64:ED:0D:21:9D:62:D5:27:E8:BA:9A:74:10:7D:5A:8B:
+                                C4:1D:3E:0D:5B:F1
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:
+                                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B
+                    Timestamp : Oct  9 03:35:25.061 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:D6:87:0F:7E:98:71:A7:DF:18:9A:9C:
+                                27:C2:0B:27:26:D8:F3:0A:C2:E8:8D:59:12:2B:F7:DF:
+                                02:08:C0:CC:4A:02:20:51:16:26:A7:86:89:B9:C7:48:
+                                29:8C:E4:3B:32:B3:9C:99:41:67:A9:B6:26:15:3D:57:
+                                5B:C1:D2:F7:BB:D2:98
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        01:e1:60:7b:dc:a8:05:db:d1:3b:51:9e:c0:03:72:c1:4e:35:
+        22:ed:79:69:4d:fa:db:53:3c:cf:1f:84:b5:51:7d:05:5f:62:
+        e7:b6:cb:49:1d:97:77:6c:eb:2e:e0:af:dc:d6:65:18:98:a5:
+        f7:a0:b9:ce:50:68:1a:d3:a2:86:b7:82:06:7a:c5:b2:5b:f4:
+        11:dd:1a:8b:52:3e:56:03:1a:a9:cb:dd:8d:ca:90:95:d9:64:
+        1e:9e:e7:9f:79:84:58:dc:02:17:c4:e6:09:cd:a4:3a:c5:85:
+        8d:82:89:9c:c6:67:b2:38:c2:dd:ca:09:bb:eb:eb:54:48:ad:
+        ff:b3:b6:04:96:60:ef:2c:75:1a:99:b4:88:31:5b:24:22:6d:
+        49:4c:aa:4a:8c:99:fb:c7:e4:11:30:39:0d:d4:14:9c:c3:9d:
+        75:a5:40:10:5a:cf:87:57:6d:77:cf:8b:95:f9:80:34:b0:15:
+        1a:da:ef:df:1f:24:db:27:64:4b:a3:e2:69:1a:37:a6:95:6f:
+        f0:84:24:9a:95:b7:23:9f:0d:07:98:6c:be:c2:bf:ed:dd:bf:
+        66:2d:9f:eb:8f:7e:61:d1:ba:91:29:3e:64:d9:41:75:a0:b8:
+        c7:2f:81:5a:c3:12:ef:f3:db:0d:88:ab:fc:39:18:e7:b1:55:
+        09:0d:5f:25
+
+============
+
+diya root: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            23:a2:97:bd:f6:98:60:f9:a9:21:a0:8a:2f:4d:25:f9
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: CN = diya.wire.link E2EI Root CA
+        Validity
+            Not Before: Nov 13 15:43:59 2023 GMT
+            Not After : Nov 13 15:48:59 2033 GMT
+        Subject: CN = diya.wire.link E2EI Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:20:02:e5:b3:d6:3c:db:97:a7:6e:e3:d6:75:65:
+                    b0:19:2d:57:9f:17:41:d6:d4:cc:06:0d:41:b9:f1:
+                    74:8b:a2:7b:fc:c5:d1:ea:ca:59:53:f0:90:6a:6a:
+                    50:61:33:48:53:68:3a:9c:b1:a1:18:4c:b9:b7:28:
+                    00:f0:7a:90:2d
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:1
+            X509v3 Subject Key Identifier: 
+                53:DD:9F:C8:B5:2E:6C:38:54:21:AB:23:30:6F:C6:BF:24:5E:2F:4B
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:45:02:20:39:45:54:02:3c:cd:66:f2:99:f6:7e:89:4c:eb:
+        cd:cf:d7:78:cc:ff:db:72:dd:fe:0b:bd:28:b8:87:06:54:71:
+        02:21:00:90:88:31:10:a6:67:6c:7e:7b:a9:74:39:b7:63:54:
+        94:4e:d1:6b:61:73:f8:2b:97:ab:23:1f:bb:75:31:03:4e
+
+============
+
+elna intermediate signed by diya: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            3d:ef:b9:d7:92:96:39:7d:df:bc:70:90:2c:3a:7c:c5
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: CN = diya.wire.link E2EI Root CA
+        Validity
+            Not Before: Nov 14 18:13:02 2023 GMT
+            Not After : May 16 18:18:02 2024 GMT
+        Subject: CN = elna.wire.link E2EI Intermediate CA
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:4e:22:51:b8:78:d0:f0:c5:29:de:c3:b5:c4:e9:
+                    d3:b5:0b:c9:c9:f4:04:a4:48:45:63:72:92:ca:aa:
+                    d6:0a:7e:f0:9c:ee:5e:82:0e:b3:d7:3d:a7:7f:1b:
+                    cc:09:8c:a9:be:75:19:b3:5f:2e:62:37:3e:4f:71:
+                    8f:71:93:97:59
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Subject Key Identifier: 
+                E5:B4:13:8D:7D:4F:B3:4F:6C:B9:36:1E:E2:DC:D7:50:A8:25:37:D6
+            X509v3 Authority Key Identifier: 
+                53:DD:9F:C8:B5:2E:6C:38:54:21:AB:23:30:6F:C6:BF:24:5E:2F:4B
+            X509v3 Name Constraints: critical
+                Permitted:
+                  DNS:acme.elna.wire.link
+                  URI:elna.wire.link
+    Signature Algorithm: ecdsa-with-SHA256
+    Signature Value:
+        30:44:02:20:55:e8:6e:f0:b0:ac:ce:32:52:09:25:ef:07:d8:
+        ef:57:ba:44:85:03:47:7b:8e:ae:36:98:3a:45:8f:07:22:7e:
+        02:20:5a:dd:ec:5c:b3:9e:8d:3a:27:e5:29:c8:14:9a:a9:91:
+        ce:c0:8e:07:ca:bd:fb:2a:aa:cf:cd:16:75:53:c8:91
+
+============
+
+diya leaf: Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            03:6e:78:81:1b:39:72:01:cd:f3:cd:be:f1:e9:1a:b7:42:34
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, O = Let's Encrypt, CN = R3
+        Validity
+            Not Before: Oct  9 02:35:25 2023 GMT
+            Not After : Jan  7 02:35:24 2024 GMT
+        Subject: CN = idp.hogwash.work
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:be:77:31:ae:8d:51:d2:6b:b8:67:b0:78:da:35:
+                    70:a4:d0:b8:bc:8c:f2:24:b6:f7:2d:32:12:cd:43:
+                    31:9a:92:62:1e:27:fe:3a:f5:f2:0e:2c:81:96:d7:
+                    bb:0a:c8:58:e1:58:c8:86:cc:d5:3c:ac:02:69:c7:
+                    13:1f:87:9c:5e
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                09:C7:FD:18:56:80:C5:12:41:DA:F9:78:F1:4F:6F:3A:27:B2:D5:15
+            X509v3 Authority Key Identifier: 
+                14:2E:B3:17:B7:58:56:CB:AE:50:09:40:E6:1F:AF:9D:8B:14:C2:C6
+            Authority Information Access: 
+                OCSP - URI:http://r3.o.lencr.org
+                CA Issuers - URI:http://r3.i.lencr.org/
+            X509v3 Subject Alternative Name: 
+                DNS:idp.hogwash.work
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 3B:53:77:75:3E:2D:B9:80:4E:8B:30:5B:06:FE:40:3B:
+                                67:D8:4F:C3:F4:C7:BD:00:0D:2D:72:6F:E1:FA:D4:17
+                    Timestamp : Oct  9 03:35:25.069 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:44:02:20:36:1A:23:E6:0C:51:D0:48:24:08:34:91:
+                                12:AB:63:46:AA:9C:BB:FA:CB:71:01:FC:CD:3B:3C:C4:
+                                25:7D:64:D5:02:20:39:6C:0F:4F:2D:F8:01:FB:18:A7:
+                                64:ED:0D:21:9D:62:D5:27:E8:BA:9A:74:10:7D:5A:8B:
+                                C4:1D:3E:0D:5B:F1
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:
+                                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B
+                    Timestamp : Oct  9 03:35:25.061 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:D6:87:0F:7E:98:71:A7:DF:18:9A:9C:
+                                27:C2:0B:27:26:D8:F3:0A:C2:E8:8D:59:12:2B:F7:DF:
+                                02:08:C0:CC:4A:02:20:51:16:26:A7:86:89:B9:C7:48:
+                                29:8C:E4:3B:32:B3:9C:99:41:67:A9:B6:26:15:3D:57:
+                                5B:C1:D2:F7:BB:D2:98
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        01:e1:60:7b:dc:a8:05:db:d1:3b:51:9e:c0:03:72:c1:4e:35:
+        22:ed:79:69:4d:fa:db:53:3c:cf:1f:84:b5:51:7d:05:5f:62:
+        e7:b6:cb:49:1d:97:77:6c:eb:2e:e0:af:dc:d6:65:18:98:a5:
+        f7:a0:b9:ce:50:68:1a:d3:a2:86:b7:82:06:7a:c5:b2:5b:f4:
+        11:dd:1a:8b:52:3e:56:03:1a:a9:cb:dd:8d:ca:90:95:d9:64:
+        1e:9e:e7:9f:79:84:58:dc:02:17:c4:e6:09:cd:a4:3a:c5:85:
+        8d:82:89:9c:c6:67:b2:38:c2:dd:ca:09:bb:eb:eb:54:48:ad:
+        ff:b3:b6:04:96:60:ef:2c:75:1a:99:b4:88:31:5b:24:22:6d:
+        49:4c:aa:4a:8c:99:fb:c7:e4:11:30:39:0d:d4:14:9c:c3:9d:
+        75:a5:40:10:5a:cf:87:57:6d:77:cf:8b:95:f9:80:34:b0:15:
+        1a:da:ef:df:1f:24:db:27:64:4b:a3:e2:69:1a:37:a6:95:6f:
+        f0:84:24:9a:95:b7:23:9f:0d:07:98:6c:be:c2:bf:ed:dd:bf:
+        66:2d:9f:eb:8f:7e:61:d1:ba:91:29:3e:64:d9:41:75:a0:b8:
+        c7:2f:81:5a:c3:12:ef:f3:db:0d:88:ab:fc:39:18:e7:b1:55:
+        09:0d:5f:25
+
+============
+
