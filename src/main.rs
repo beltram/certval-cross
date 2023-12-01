@@ -12,9 +12,11 @@ use x509_cert::der::pem::LineEnding;
 
 fn main() {
     pretty_print("target", TARGET);
-    pretty_print("elna int", ELNA_INTERMEDIATE);
-    pretty_print("elna root", ELNA_ROOT);
-    validation_tryout()
+    pretty_print("elna int cs diya", ELNA_INTERMEDIATE_CROSS_SIGNED_DIYA);
+    pretty_print("diya root", DIYA_ROOT);
+    // pretty_print("elna int", ELNA_INTERMEDIATE);
+    // pretty_print("elna root", ELNA_ROOT);
+    // validation_tryout()
 }
 
 fn validation_tryout() {
@@ -25,16 +27,20 @@ fn validation_tryout() {
     let (elna_intermediate, diya_intermediate_cs_elna, elna_lets_encrypt) = (ELNA_INTERMEDIATE, DIYA_INTERMEDIATE_CROSS_SIGNED_ELNA, ELNA_LETS_ENCRYPT);
     let (elna_intermediate_cs_diya, diya_lets_encrypt) = (ELNA_INTERMEDIATE_CROSS_SIGNED_DIYA, DIYA_LETS_ENCRYPT);
 
-    let mut ta_source = TaSource::new_from_unparsed(&[cert_to_der(elna_ta).as_slice(), cert_to_der(diya_ta).as_slice(), cert_to_der(r3).as_slice()]).unwrap();
+    let mut ta_source = TaSource::new_from_unparsed(&[
+        cert_to_der(elna_ta).as_slice(),
+        // cert_to_der(diya_ta).as_slice(),
+        // cert_to_der(r3).as_slice(),
+    ]).unwrap();
     env.add_trust_anchor_source(Box::new(ta_source));
 
     // add all trust anchor
     let elna_ta = PDVTrustAnchorChoice::try_from(cert_to_der(elna_ta).as_slice()).unwrap();
-    env.is_trust_anchor(&elna_ta).unwrap();
+    // env.is_trust_anchor(&elna_ta).unwrap();
     let diya_ta = PDVTrustAnchorChoice::try_from(cert_to_der(diya_ta).as_slice()).unwrap();
-    env.is_trust_anchor(&diya_ta).unwrap();
+    // env.is_trust_anchor(&diya_ta).unwrap();
     let r3 = PDVTrustAnchorChoice::try_from(cert_to_der(r3).as_slice()).unwrap();
-    env.is_trust_anchor(&r3).unwrap();
+    // env.is_trust_anchor(&r3).unwrap();
 
     let mut intermediates = CertificateChain::new();
 
@@ -45,10 +51,10 @@ fn validation_tryout() {
     let diya_intermediate_cs_elna = PDVCertificate::try_from(cert_to_der(diya_intermediate_cs_elna).as_slice()).unwrap();
     let diya_lets_encrypt = PDVCertificate::try_from(cert_to_der(diya_lets_encrypt).as_slice()).unwrap();
     intermediates.push(elna_intermediate.clone());
-    intermediates.push(elna_intermediate_cs_diya.clone());
-    intermediates.push(elna_lets_encrypt.clone());
-    intermediates.push(diya_intermediate_cs_elna.clone());
-    intermediates.push(diya_lets_encrypt.clone());
+    // intermediates.push(elna_intermediate_cs_diya.clone());
+    // intermediates.push(elna_lets_encrypt.clone());
+    // intermediates.push(diya_intermediate_cs_elna.clone());
+    // intermediates.push(diya_lets_encrypt.clone());
 
     let target = PDVCertificate::try_from(cert_to_der(target).as_slice()).unwrap();
 
